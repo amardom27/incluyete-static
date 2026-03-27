@@ -1,0 +1,588 @@
+/* Iconos Genéricos */
+#burguer {
+    stroke: var(--primary);
+    cursor: pointer;
+}
+
+#lupa {
+    stroke: var(--bg-color);
+    fill: transparent;
+}
+
+/* Botones Predefinidos */
+.btn-style-1 {
+    background: none;
+    color: var(--primary);
+    cursor: pointer;
+    border: none;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-style-1:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+.btn-style-2 {
+    background-color: var(--primary);
+    color: var(--bg-color);
+    padding: .6rem;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-style-2:hover {
+    background-color: var(--secondary);
+}
+
+.btn-style-3 {
+    width: calc(100% - 1.6rem);
+    background-color: var(--primary);
+    color: var(--bg-color);
+    padding: .8rem 5rem;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.btn-style-3:hover {
+    background-color: var(--secondary);
+}
+
+/* Carta de lugar (lugares) */
+.card-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+}
+
+.card {
+    padding: 0.4rem;
+    flex: 1 1 30rem;
+    max-width: 26rem;
+}
+
+.card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    outline: 2px solid var(--mid-gray);
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card a:hover,
+.card a:focus {
+    outline-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.card figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.card figure img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    object-fit: cover;
+}
+
+.card figcaption {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.card-category {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+/* Bolas de categorías */
+.bubble-categ-1 {
+    background-color: var(--light-gray);
+    color: var(--text);
+    border-radius: 3rem;
+    font-size: small;
+    padding: .2rem 1rem;
+}
+
+.bubble-categ-2 {
+    background-color: var(--text);
+    color: var(--bg-color);
+    border-radius: 3rem;
+    font-size: small;
+    padding: .2rem 1rem;
+}
+
+/* Hero (primera seccion) de lugares/[id] */
+.hero-lugar {
+    position: relative;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+}
+
+.hero-lugar figure.hero-img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.hero-lugar figure.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-lugar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.hero-lugar .hero-title {
+    position: absolute;
+    z-index: 2;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-lugar .hero-title h1 {
+    margin: 0 0 0.5rem 0;
+    color: var(--bg-color);
+    font-size: 2rem;
+    /* adjust as needed */
+    line-height: 1.2;
+}
+
+.hero-lugar .hero-categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Título con borde debajo */
+.title-1 {
+    border-bottom: 1px solid var(--dark-gray);
+    padding-bottom: .2rem;
+    margin-bottom: 1rem;
+}
+
+/* Imágenes de la galería (lugares/[id]) */
+.img-box {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .4rem;
+}
+
+/* Información del lugar (lugares [id]) */
+.info-1 {
+    background-color: var(--mid-gray);
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.info-1 h3 {
+    font-size: medium;
+    margin-bottom: .6rem;
+}
+
+/* Link normal */
+.link-1 {
+    text-decoration: none;
+}
+
+.link-1:hover {
+    text-decoration: underline;
+}
+
+/* Nuevo comentario */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.comment-textarea {
+    width: 100%;
+    min-height: 6rem;
+    max-height: 10rem;
+    padding: 0.8rem;
+    font: inherit;
+    line-height: 1.4;
+    border-radius: 10px;
+    border: 1px solid var(--dark-gray);
+    background: var(--light-gray);
+    resize: vertical;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment-hint {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+}
+
+.comment {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.comment header.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.comment-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
+.comment-meta {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.comment-author {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.comment-time {
+    font-size: 0.7rem;
+    color: var(--dark-gray);
+}
+
+.comment-body {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.comment div.comment-footer {
+    display: flex;
+    align-items: center;
+}
+
+.comment-like-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+}
+
+.comment-like-btn:hover,
+.comment-like-btn:focus {
+    background: var(--light-gray);
+    outline: 2px solid var(--secondary);
+}
+
+.comment-like-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--dark-gray);
+    transition: color 150ms ease, transform 150ms ease;
+}
+
+.comment-like-btn:hover .comment-like-icon,
+.comment-like-btn:focus .comment-like-icon {
+    color: var(--error);
+    transform: scale(1.1);
+}
+
+.comment-like-count {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.comment+.comment {
+    margin-top: 1rem;
+}
+
+header.section-header-1 h1 {
+    font-size: 1.4rem;
+}
+
+/* Input login */
+.input-style {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.input-style label {
+    font-weight: 600;
+}
+
+.input-style input {
+    width: 100%;
+    padding: .65rem .8rem;
+    border: 2px solid var(--mid-gray);
+    border-radius: .4rem;
+    background: #fff;
+    font: inherit;
+    transition: border .2s ease;
+}
+
+.input-style input:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.input-style input::placeholder {
+    color: var(--dark-gray);
+    opacity: .8;
+}
+
+.input-style span {
+    font-size: .8rem;
+    color: var(--error);
+    display: none;
+}
+
+.input-style input:focus:invalid,
+.input-style input:not(:placeholder-shown):invalid {
+    border-color: var(--error);
+}
+
+.input-style input:focus:invalid+span,
+.input-style input:not(:placeholder-shown):invalid+span {
+    display: block;
+}
+
+/* link 2 */
+.link-style-2 {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.link-style-2:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* Paneles de los menús que aparecen en pantalla */
+.panel {
+    position: fixed;
+    top: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    max-width: 30rem;
+    height: 100vh;
+    padding: 3rem 2rem;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.panel-cabecera {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.panel-contenido>legend {
+    margin-bottom: 1rem;
+}
+
+.panel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .6rem .8rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.panel-item:hover {
+    background-color: var(--primary);
+    color: var(--bg-color);
+}
+
+.panel-item:hover .circulo {
+    visibility: visible;
+}
+
+/* seleccionado */
+input[type="radio"]:checked+.panel-item {
+    background-color: var(--primary);
+    color: var(--bg-color);
+}
+
+input[type="radio"]:checked+.panel-item .circulo {
+    visibility: visible;
+    color: var(--bg-color);
+}
+
+.circulo {
+    color: var(--bg-color);
+    width: .6rem;
+    height: .6rem;
+    visibility: hidden;
+}
+
+.panel-item span {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.panel-item span svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.panel-fondo {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .45);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+
+    z-index: 5;
+}
+
+.panel-cerrar {
+    cursor: pointer;
+}
+
+.panel-izquierda {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.panel-derecha {
+    right: 0;
+    transform: translateX(100%);
+}
+
+#menu-control:checked~#menu-panel {
+    transform: translate(0);
+}
+
+#ajustes-control:checked~#menu-ajustes {
+    transform: translateX(0);
+}
+
+#menu-control:checked~.fondo-menu,
+#ajustes-control:checked~.fondo-ajustes {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.icono-cont {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: var(--bg-color);
+
+    border: 1px solid var(--bg-color);
+    cursor: pointer;
+    border-radius: 40rem;
+    padding: .4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+#icono-acces {
+    width: 2rem;
+    height: 2rem;
+}
+
+.flag-img {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.panel-radio {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,256 @@
+/* Sección Bienvenida */
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+#welcome .img-cont {
+    position: relative;
+    width: 100%;
+    height: 14.375rem;
+    overflow: hidden;
+}
+
+#welcome .img-cont img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#welcome .img-cont::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+#welcome .img-cont h1 {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--bg-color);
+    z-index: 2;
+    margin: 0;
+}
+
+#welcome .img-cont h1 span {
+    color: var(--secondary-bright);
+    display: block;
+}
+
+#welcome>p {
+    padding: 0 var(--space-4);
+    text-align: center;
+    max-width: 80ch;
+}
+
+/* Por qué buscar aquí */
+#why-here {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--bg-color);
+    background-color: var(--primary);
+    padding: 2rem var(--space-4);
+}
+
+#why-here article {
+    background-color: var(--bg-color);
+    color: var(--text);
+    border-radius: .4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+#why-here article>p:not(:last-child) {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.why-here-articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.why-here-articles article {
+    flex-basis: 100%;
+}
+
+@media (min-width: 992px) {
+
+    .why-here-articles article {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+/* Explora categorías */
+.categ-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.categ-cont li {
+    flex-basis: 100%;
+    outline: 1px solid black;
+    padding: 2rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .categ-cont li {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+#categories ul.categ-cont li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+#categories ul.categ-cont li:hover {
+    outline-color: var(--secondary);
+    color: var(--secondary);
+}
+
+#categories ul.categ-cont li:hover svg {
+    stroke: var(--secondary);
+}
+
+#categories ul.categ-cont li svg {
+    width: 2rem;
+    height: 2rem;
+    stroke: black;
+    stroke-width: 2;
+}
+
+#categories ul.categ-cont li p {
+    text-align: center;
+}
+
+/* Newsletter */
+#newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--bg-color);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#newsletter label {
+    font-size: .9rem;
+    margin-bottom: .2rem;
+}
+
+#newsletter input {
+    padding: .6rem .4rem;
+    border-radius: .4rem;
+    border: 2px solid var(--bg-color);
+    font: inherit;
+    transition: border .2s ease;
+}
+
+#newsletter input:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+#newsletter input:not(:placeholder-shown):invalid {
+    border-color: var(--error);
+}
+
+#newsletter input:not(:placeholder-shown):valid {
+    border-color: var(--success);
+}
+
+#newsletter input:valid {
+    border-color: var(--success);
+}
+
+.help-text {
+    font-size: .8rem;
+    opacity: .8;
+}
+
+.error-text {
+    font-size: .8rem;
+    color: #ffdddd;
+    display: block;
+    visibility: hidden;
+    margin-top: .3rem;
+}
+
+#newsletter input:invalid:focus~.error-text {
+    visibility: visible;
+}
+
+#newsletter button {
+    background-color: var(--secondary);
+    color: var(--bg-color);
+    padding: .6rem;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#newsletter button:hover {
+    background-color: var(--bg-color);
+    color: var(--primary);
+}
+
+#newsletter button:focus-visible {
+    outline: 2px solid var(--bg-color);
+    outline-offset: 2px;
+}
+
+#newsletter form.loading .btn-text {
+    display: none;
+}
+
+#newsletter form.loading .btn-loading {
+    display: inline;
+}
+
+#newsletter form.loading button {
+    cursor: wait;
+    opacity: .7;
+}
+
+.success-message {
+    display: none;
+    font-size: .9rem;
+}
+
+#newsletter form.success .success-message {
+    display: block;
+}
+
+#newsletter form.success input,
+#newsletter form.success button {
+    display: none;
+}

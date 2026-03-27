@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    <link rel="stylesheet" href="../../assets/css/pages/login.css">
+</head>
+
+<body>
+    <main class="login-page">
+        <section class="login-card">
+            <a href="../../index.html" class="login-brand">
+                <div class="logo-cont">
+                    <img class="rounded" src="../../assets/images/oficial.webp" alt="Logo">
+                </div>
+            </a>
+
+            <div class="login-media">
+                <img src="../../assets/images/calle-san-miguel.webp" alt="Calle San Miguel">
+            </div>
+
+            <div class="login-content">
+                <h1>Bienvenido</h1>
+                <p class="login-text">
+                    Introduzca sus credenciales para acceder a su cuenta
+                </p>
+
+                <form action="" method="post" class="login-form">
+                    <div class="input-style">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="ejemplo@email.com" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
+
+                    <div class="input-style">
+                        <label for="clave">Contraseña</label>
+                        <input type="password" name="clave" id="clave" placeholder="****" required>
+                        <span>* Campo obligatorio</span>
+                    </div>
+
+                    <div class="checkbox-style">
+                        <input type="checkbox" name="recordar" id="recordar">
+                        <label class="cursor-pointer" for="recordar">Recordar dispositivo por 30 días</label>
+                    </div>
+
+                    <button type="submit" class="btn-style-2 transition">Entrar</button>
+
+                    <p class="login-register">
+                        No tienes cuenta?
+                        <a href="../cuenta/index.html" class="link-style-2 transition">Crear cuenta</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
